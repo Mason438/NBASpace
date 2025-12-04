@@ -1,6 +1,6 @@
 # NBA Space
 
-NBA Space is a web application that allows users to track NBA stats, standings, and team information. Users can browse NBA teams by conference and division, view team details, and stay on top of playoff races and conference standings.
+NBA Space is a web application that allows users to track NBA stats, standings, and team information. Users can browse NBA teams by conference and division, view team details, and stay on top of player details and conference standings.
 
 ---
 
