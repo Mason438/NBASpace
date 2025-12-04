@@ -6,7 +6,7 @@ const navItems = [
     {name: "Home", href: "#hero"}, 
     {name: "About", href: "#about"}, 
     {name: "Standings", href: "#standings"}, 
-    {name: "Playoffs", href: "#playoffs"}, 
+    {name: "Players", href: "#players"}, 
     {name: "Teams", href: "#teams"}, 
 ];
 

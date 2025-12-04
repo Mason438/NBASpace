@@ -21,13 +21,13 @@ export const HeroSection = () => {
                     </h1>
 
                     <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto opacity-0 animate-fade-in-delay-3">
-                        Stay on top of every dribble, dunk, and stat with NBA Space. Track playoff races, conference standings, 
+                        Stay on top of every dribble, dunk, and stat with NBA Space. Track player details, conference standings, 
                         and all your favorite team stats in one place—your ultimate NBA hub.
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                        <a href="#standings" className="cosmic-button">
-                            Current League Standings
+                        <a href="#teams" className="cosmic-button">
+                            Browse NBA Teams
                         </a>
                     </div>
                 </div>
