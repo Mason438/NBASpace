@@ -114,7 +114,7 @@ export const TeamSection = () => {
           {filteredTeams.map((team) => (
             <div
               key={team.id}
-              className="p-6 border rounded-xl bg-card text-foreground shadow-sm"
+              className="p-6 border rounded-xl bg-card text-foreground shadow-sm card-hover"
             >
               <h3 className="text-xl font-semibold mb-2">{team.full_name}</h3>
               <p className="text-muted-foreground">{team.city}</p>
