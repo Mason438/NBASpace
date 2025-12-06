@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 export const StandingsSection = () => {
   
+    // Create dictionary of teams and rank with tags either East or West
+
   return (
     <section
       id="standings"
@@ -12,14 +14,16 @@ export const StandingsSection = () => {
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-8">
               <div className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
                   <div className="p-6">
-                      <h3 className="text-3xl font-semibold mb-1"> Eastern Conference</h3>
-                      <p className="text-muted-foreground text-sm mb-4"> paragraph</p>
+                      <h3 className="text-3xl font-semibold mb-1">Eastern Conference</h3>
+                      <p className="text-muted-foreground text-sm mb-4">paragraph</p>
+                      {/* Loop through dictionary of team names with East tag and sort by rank */}
                   </div>
               </div>
               <div className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover">
                   <div className="p-6">
                       <h3 className="text-3xl font-semibold mb-1">Western Conference</h3>
-                      <p className="text-muted-foreground text-sm mb-4"> paragraph</p>
+                      <p className="text-muted-foreground text-sm mb-4">paragraph</p>
+                      {/* Loop through dictionary of team names with West tag and sort by rank */}
                   </div>
               </div>    
           </div>
