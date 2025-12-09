@@ -22,6 +22,8 @@ NBA Space is a web application that allows users to track NBA stats, standings, 
 
 - Browse NBA teams by **conference** and **division**.
 - View team details including full name, city, and abbreviation.
+- View league standings by conference.
+- Search for player information.
 - Responsive design using TailwindCSS.
 - Dark and light mode toggle.
 - Background animations for a cosmic theme.
