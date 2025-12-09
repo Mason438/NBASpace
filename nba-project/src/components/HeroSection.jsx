@@ -26,8 +26,8 @@ export const HeroSection = () => {
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                        <a href="#teams" className="cosmic-button">
-                            Browse NBA Teams
+                        <a href="#standings" className="cosmic-button">
+                            Curent NBA Standings
                         </a>
                     </div>
                 </div>
