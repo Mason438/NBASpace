@@ -4,6 +4,7 @@ import { Navbar } from "../components/NavBar";
 import { HeroSection } from "../components/HeroSection";
 import { TeamSection } from "../components/TeamSection";
 import { AboutSection } from "../components/AboutSection";
+import { PlayerSection} from "../components/PlayerSection";
 
 export const Home = () => {
     return (
@@ -18,7 +19,9 @@ export const Home = () => {
             <main>
                 <HeroSection />
                 <TeamSection />
+                <PlayerSection />
                 <AboutSection />
+               
             </main>
         </div>
     );
