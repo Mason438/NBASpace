@@ -19,9 +19,7 @@ export const PlayerSection = () => {
     setError(null);
 
     try {
-      const res = await fetch(
-        `http://localhost:3000/api/players?search=${search}&page=${newPage}`
-      );
+      const res = await fetch(`/api/players?search=${search}&page=${page}`)
 
       if (!res.ok) throw new Error("Failed response");
 

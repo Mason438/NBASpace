@@ -11,7 +11,7 @@ export const TeamSection = () => {
   useEffect(() => {
     const loadTeams = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/teams");
+        const res = await fetch("/api/teams")
         if (!res.ok) throw new Error("Failed to fetch teams from server");
         const data = await res.json();
         setTeams(data.data); // SDK returns { data: [...] }
