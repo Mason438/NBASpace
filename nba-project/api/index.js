@@ -1,26 +1,31 @@
-import express from "express";
-import { BalldontlieAPI } from "@balldontlie/sdk";
+const express = require("express");
 
 const app = express();
 
-// CORS headers 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
 
-// Initialize SDK with API key (from Vercel environment variables)
-const api = new BalldontlieAPI({ apiKey: process.env.BDL_API_KEY });
-
-// Endpoint to get all NBA teams
+// Endpoint to get all NBA teams - using direct fetch instead of SDK
 app.get("/api/teams", async (req, res) => {
   try {
-    const data = await api.nba.getTeams();
-    res.json(data);
+    const response = await fetch("https://api.balldontlie.io/v1/teams", {
+      headers: {
+        Authorization: process.env.BDL_API_KEY
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`API responded with status ${response.status}`);
+    }
+
+    const data = await response.json();
+    res.json(data); // Returns { data: [...], meta: {...} }
   } catch (err) {
     console.error("Error fetching teams:", err);
-    res.status(500).json({ error: "Failed to fetch teams" });
+    res.status(500).json({ error: "Failed to fetch teams", details: err.message });
   }
 });
 
@@ -39,6 +44,10 @@ app.get("/api/players", async (req, res) => {
       }
     });
 
+    if (!response.ok) {
+      throw new Error(`API responded with status ${response.status}`);
+    }
+
     const data = await response.json();
 
     res.json({
@@ -47,9 +56,8 @@ app.get("/api/players", async (req, res) => {
     });
   } catch (err) {
     console.error("Error fetching players:", err);
-    res.status(500).json({ error: "Failed to fetch players" });
+    res.status(500).json({ error: "Failed to fetch players", details: err.message });
   }
 });
 
-
-export default app;
+module.exports = app;
